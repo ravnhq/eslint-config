@@ -52,10 +52,6 @@ module.exports = {
 
     // Rules that need adjusting
     "func-style": ["error", "declaration", { allowArrowFunctions: true }],
-    // "no-magic-numbers": [
-    //   "error",
-    //   { ignoreArrayIndexes: true, ignoreDefaultValues: true },
-    // ],
     "no-param-reassign": ["error", { props: false }],
     "object-shorthand": ["error", "properties"],
 
