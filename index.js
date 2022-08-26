@@ -15,9 +15,8 @@ module.exports = {
   extends: [
     "plugin:eslint-comments/recommended",
     "plugin:sonarjs/recommended",
-    "plugin:unicorn/all",
-    "eslint:all",
-    "plugin:import/recommended",
+    "plugin:unicorn/recommended",
+    "eslint:recommended",
     "prettier",
   ],
   plugins: ["filenames", "promise"],
@@ -26,39 +25,14 @@ module.exports = {
     node: true,
   },
   parserOptions: {
-    ecmaVersion: 2019,
+    ecmaVersion: 2022,
   },
   rules: {
     // Rules that are no bueno
-    "arrow-body-style": "off",
-    "capitalized-comments": "off",
-    "class-methods-use-this": "off",
-    "default-param-last": "off",
-    "eol-last": "off",
-    "id-length": "off",
-    "init-declarations": "off",
-    "line-comment-position": "off",
-    "lines-between-class-members": "off",
-    "max-lines-per-function": "off",
-    "max-lines": "off",
-    "max-params": "off",
-    "max-statements": "off",
-    "multiline-comment-style": "off",
-    "no-inline-comments": "off",
-    "no-magic-numbers": "off",
-    "no-param-reassign": "off",
-    "no-prototype-builtins": "off",
-    "no-ternary": "off",
-    "no-undefined": "off",
-    "no-warning-comments": "off",
-    "one-var": "off",
-    "prefer-destructuring": "off", // destructuring is cool and great but not required IMO
-    "require-unicode-regexp": "off",
-    "sort-keys": "off",
+    "object-shorthand": "off",
 
     // Rules that need adjusting
     "func-style": ["error", "declaration", { allowArrowFunctions: true }],
-    "object-shorthand": ["error", "properties"],
 
     "eslint-comments/disable-enable-pair": ["error", { allowWholeFile: true }],
     "eslint-comments/no-duplicate-disable": "error",
@@ -76,22 +50,6 @@ module.exports = {
     ],
     "filenames/no-index": "off",
 
-    "sort-imports": "off",
-    "import/default": "error",
-    "import/export": "error",
-    "import/named": "error",
-    "import/namespace": "error",
-    "import/no-cycle": "error",
-    "import/no-duplicates": "error",
-    "import/no-named-as-default": "error",
-    "import/no-named-as-default-member": "off",
-    "import/no-unresolved": "error",
-
-    "param-names": "off",
-    "always-return": "off",
-    "no-return-wrap": "off",
-    "no-native": "off",
-    "catch-or-return": "off",
     "promise/always-return": "error",
     "promise/avoid-new": "off",
     "promise/catch-or-return": "error",
@@ -105,7 +63,9 @@ module.exports = {
     "promise/param-names": "error",
     "promise/valid-params": "error",
 
+    "sonarjs/cognitive-complexity": "off",
     "sonarjs/no-duplicate-string": "off",
+    "sonarjs/prefer-immediate-return": "off",
 
     "unicorn/no-abusive-eslint-disable": "off",
     "unicorn/no-array-for-each": "off",
@@ -114,30 +74,16 @@ module.exports = {
     "unicorn/no-unsafe-regex": "off",
     "unicorn/prefer-top-level-await": "off",
     "unicorn/prefer-module": "off",
-    "unicorn/prevent-abbreviations": [
-      "error",
-      {
-        checkFilenames: false,
-        replacements: {
-          args: false,
-          dir: false,
-          env: false,
-          params: false,
-          prev: false,
-          props: false,
-          ref: false,
-          req: false,
-          res: false,
-        },
-      },
-    ],
+    "unicorn/prevent-abbreviations": ["off"],
+    "unicorn/consistent-function-scoping": "off",
+    "unicorn/no-useless-undefined": "off",
   },
   overrides: [
     {
       files: ["**/*.ts?(x)"],
       parser: "@typescript-eslint/parser",
       parserOptions: {
-        ecmaVersion: 2019,
+        ecmaVersion: 2022,
         project: tsConfig,
         sourceType: "module",
       },
@@ -145,25 +91,22 @@ module.exports = {
       extends: [
         "plugin:@typescript-eslint/recommended",
         "plugin:@typescript-eslint/recommended-requiring-type-checking",
-        "plugin:import/typescript",
       ],
-      settings: {
-        "import/parsers": {
-          "@typescript-eslint/parser": [".ts", ".tsx", ".d.ts"],
-        },
-        "import/resolver": {
-          typescript: {
-            alwaysTryTypes: true,
-          },
-        },
-      },
       rules: {
         "no-duplicate-imports": "off",
         "consistent-return": "off", // in TS this is much less an issue
 
         "unicorn/prefer-module": "error",
 
+        "@typescript-eslint/no-floating-promises": "off",
+
         "@typescript-eslint/no-explicit-any": "error",
+        "@typescript-eslint/no-misused-promises": [
+          "error",
+          {
+            checksVoidReturn: false,
+          },
+        ],
         "@typescript-eslint/no-non-null-assertion": "error",
         "no-shadow": "off",
         "@typescript-eslint/no-shadow": "error",

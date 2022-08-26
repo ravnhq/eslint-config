@@ -1,0 +1,20 @@
+name: release
+on:
+  push:
+    branches: [master]
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+env:
+  # GH_TOKEN: ${{ secrets.GH_TOKEN }}
+  NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install Dependencies
+        run: yarn install
+      - name: Check formatting & config
+        run: yarn validate
+      - name: Semantic Release
+        run: yarn semantic-release
