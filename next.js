@@ -5,7 +5,5 @@
 require("@rushstack/eslint-patch/modern-module-resolution")
 
 module.exports = {
-  settings: {
-    "import/core-modules": ["electron"],
-  },
+  extends: ["plugin:@next/next/core-web-vitals"],
 }

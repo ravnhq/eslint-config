@@ -1,1 +1,1 @@
-module.exports = '@ravnhq/prettier-config'
+module.exports = "@ravnhq/prettier-config"
