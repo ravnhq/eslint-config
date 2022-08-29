@@ -13,6 +13,7 @@ const tsConfig = fs.existsSync("tsconfig.json")
 
 module.exports = {
   extends: [
+    "plugin:eslint-comments/recommended",
     "plugin:sonarjs/recommended",
     "plugin:unicorn/all",
     "eslint:all",
@@ -29,35 +30,35 @@ module.exports = {
   },
   rules: {
     // Rules that are no bueno
+    "arrow-body-style": "off",
     "capitalized-comments": "off",
-    "line-comment-position": "off",
-    "multiline-comment-style": "off",
-    "no-inline-comments": "off",
-    "no-ternary": "off",
-    "no-undefined": "off",
-    "one-var": "off",
-    "sort-keys": "off",
-    "max-statements": "off",
     "eol-last": "off",
-    "max-lines-per-function": "off",
     "id-length": "off",
     "init-declarations": "off",
-    "arrow-body-style": "off",
-    "max-params": "off",
+    "line-comment-position": "off",
+    "lines-between-class-members": "off",
+    "max-lines-per-function": "off",
     "max-lines": "off",
-    "no-warning-comments": "off",
-    "prefer-destructuring": "off", // destructuring is cool and great but not required IMO
-    "no-prototype-builtins": "off",
+    "max-params": "off",
+    "max-statements": "off",
+    "multiline-comment-style": "off",
+    "no-inline-comments": "off",
     "no-magic-numbers": "off",
+    "no-prototype-builtins": "off",
+    "no-ternary": "off",
+    "no-undefined": "off",
+    "no-warning-comments": "off",
+    "one-var": "off",
+    "prefer-destructuring": "off", // destructuring is cool and great but not required IMO
+    "require-unicode-regexp": "off",
+    "sort-keys": "off",
 
     // Rules that need adjusting
     "func-style": ["error", "declaration", { allowArrowFunctions: true }],
-    // "no-magic-numbers": [
-    //   "error",
-    //   { ignoreArrayIndexes: true, ignoreDefaultValues: true },
-    // ],
     "no-param-reassign": ["error", { props: false }],
     "object-shorthand": ["error", "properties"],
+
+    "eslint-comments/disable-enable-pair": ["error", { allowWholeFile: true }],
 
     "unicorn/filename-case": "off",
     "filenames/match-regex": [
@@ -77,6 +78,11 @@ module.exports = {
     "import/no-named-as-default-member": "off",
     "import/no-unresolved": "error",
 
+    "param-names": "off",
+    "always-return": "off",
+    "no-return-wrap": "off",
+    "no-native": "off",
+    "catch-or-return": "off",
     "promise/always-return": "error",
     "promise/avoid-new": "off",
     "promise/catch-or-return": "error",
@@ -90,7 +96,9 @@ module.exports = {
     "promise/param-names": "error",
     "promise/valid-params": "error",
 
+    "unicorn/no-abusive-eslint-disable": "off",
     "unicorn/no-array-for-each": "off",
+    "unicorn/no-keyword-prefix": "off",
     "unicorn/no-null": "off", // Maybe we should stop using null
     "unicorn/no-unsafe-regex": "off",
     "unicorn/prefer-top-level-await": "off",
@@ -98,15 +106,17 @@ module.exports = {
     "unicorn/prevent-abbreviations": [
       "error",
       {
+        checkFilenames: false,
         replacements: {
+          args: false,
           dir: false,
           env: false,
           params: false,
+          prev: false,
           props: false,
           ref: false,
           req: false,
           res: false,
-          args: false,
         },
       },
     ],
@@ -162,8 +172,11 @@ module.exports = {
 
         "unicorn/prefer-module": "error",
 
-        "@typescript-eslint/no-unused-vars": "error",
         "@typescript-eslint/no-explicit-any": "error",
+        "@typescript-eslint/no-non-null-assertion": "error",
+        "no-shadow": "off",
+        "@typescript-eslint/no-shadow": "error",
+        "@typescript-eslint/no-unused-vars": "error",
       },
     },
   ],
