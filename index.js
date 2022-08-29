@@ -96,7 +96,7 @@ module.exports = {
     "promise/param-names": "error",
     "promise/valid-params": "error",
 
-    "unicorn/no-abusive-disable": "off",
+    "unicorn/no-abusive-eslint-disable": "off",
     "unicorn/no-array-for-each": "off",
     "unicorn/no-keyword-prefix": "off",
     "unicorn/no-null": "off", // Maybe we should stop using null
