@@ -5,7 +5,7 @@
 require("@rushstack/eslint-patch/modern-module-resolution")
 
 module.exports = {
-  plugins: ["filenames", "promise"],
+  plugins: ["filenames"],
   rules: {
     "filenames/match-regex": ["error", /^[\da-z]+(?:[A-Z][\da-z]+)*$/g],
     "filenames/match-exported": ["error", "camel"],
