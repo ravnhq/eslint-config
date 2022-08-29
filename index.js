@@ -172,9 +172,9 @@ module.exports = {
 
         "unicorn/prefer-module": "error",
 
-        "no-shadow": "off",
         "@typescript-eslint/no-explicit-any": "error",
         "@typescript-eslint/no-non-null-assertion": "error",
+        "no-shadow": "off",
         "@typescript-eslint/no-shadow": "error",
         "@typescript-eslint/no-unused-vars": "error",
       },
