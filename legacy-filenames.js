@@ -1,4 +1,12 @@
 /**
+ * In projects where our legacy filename structure is used, this config can be
+ * extended to fix the filename rules
+ *
+ * Legacy file naming structure: camelCase unless the file is exporting a react
+ * component (.tsx) in which case use PascalCase
+ */
+
+/**
  * @see https://github.com/eslint/eslint/issues/3458
  * @see https://www.npmjs.com/package/@rushstack/eslint-patch
  */
