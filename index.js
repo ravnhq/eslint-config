@@ -50,12 +50,15 @@ module.exports = {
     "no-warning-comments": "off",
     "one-var": "off",
     "prefer-destructuring": "off", // destructuring is cool and great but not required IMO
+    "require-unicode-regexp": "off",
     "sort-keys": "off",
 
     // Rules that need adjusting
     "func-style": ["error", "declaration", { allowArrowFunctions: true }],
     "no-param-reassign": ["error", { props: false }],
     "object-shorthand": ["error", "properties"],
+
+    "eslint-comments/disable-enable-pair": ["error", { allowWholeFile: true }],
 
     "unicorn/filename-case": "off",
     "filenames/match-regex": [
@@ -93,6 +96,7 @@ module.exports = {
     "promise/param-names": "error",
     "promise/valid-params": "error",
 
+    "unicorn/no-abusive-disable": "off",
     "unicorn/no-array-for-each": "off",
     "unicorn/no-keyword-prefix": "off",
     "unicorn/no-null": "off", // Maybe we should stop using null
