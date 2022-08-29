@@ -1,6 +1,6 @@
 {
   "name": "@ravnhq/eslint-config",
-  "version": "0.0.13",
+  "version": "0.0.14",
   "main": "index.js",
   "author": "Donovan Hiland <donovan.hiland@gmail.com>",
   "license": "MIT",
