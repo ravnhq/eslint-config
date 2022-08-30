@@ -39,5 +39,12 @@ module.exports = {
         "react/function-component-definition": "off",
       },
     },
+    {
+      files: ["**/use*.(j|t)s?(x)"],
+      rules: {
+        "filenames/match-regex": ["error", /^use(?:[A-Z][\da-z]+)*$/],
+        "filenames/match-exported": ["error", "camel"],
+      },
+    },
   ],
 }
