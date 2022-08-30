@@ -59,6 +59,8 @@ module.exports = {
     "object-shorthand": ["error", "properties"],
 
     "eslint-comments/disable-enable-pair": ["error", { allowWholeFile: true }],
+    "eslint-comments/no-duplicate-disable": "error",
+    "eslint-comments/no-unused-disable": "error",
 
     "unicorn/filename-case": "off",
     "filenames/match-regex": [
