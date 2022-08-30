@@ -19,7 +19,7 @@ module.exports = {
   },
   overrides: [
     {
-      files: ["**/*.(j|t)s?(x)"],
+      files: ["**/*.@(js|tsx)"],
       extends: [
         "plugin:react/all",
         "plugin:react/jsx-runtime",
@@ -40,7 +40,7 @@ module.exports = {
       },
     },
     {
-      files: ["**/use*.(j|t)s?(x)"],
+      files: ["**/use@([A-Z]|-)*.@(js|ts|tsx)"],
       rules: {
         "filenames/match-regex": ["error", /^use(?:[A-Z][\da-z]+)*$/],
         "filenames/match-exported": ["error", "camel"],
