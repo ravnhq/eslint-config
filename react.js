@@ -26,9 +26,11 @@ module.exports = {
         "plugin:react-hooks/recommended",
       ],
       rules: {
+        "react/button-has-type": "off",
         "react/forbid-component-props": "off",
         "react/function-component-definition": "off",
         "react/hook-use-state": "off",
+        "react/jsx-closing-tag-location": "off",
         "react/jsx-curly-newline": "off",
         "react/jsx-indent-props": "off",
         "react/jsx-indent": "off",
@@ -56,7 +58,7 @@ module.exports = {
       },
     },
     {
-      files: ["**/use@([A-Z]|-)*.@(js|ts|tsx)"],
+      files: ["**/use@([A-Z]|-|_)*.@(js|ts|tsx)"],
       rules: {
         "filenames/match-regex": ["error", /^use(?:[A-Z][\da-z]+)*$/],
         "filenames/match-exported": ["error", "camel"],
