@@ -75,6 +75,7 @@ module.exports = {
     "import/export": "error",
     "import/named": "error",
     "import/namespace": "error",
+    "import/no-cycle": "error",
     "import/no-duplicates": "error",
     "import/no-named-as-default": "error",
     "import/no-named-as-default-member": "off",
