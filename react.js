@@ -48,6 +48,7 @@ module.exports = {
         "react/jsx-one-expression-per-line": "off",
         "react/jsx-props-no-spreading": "off",
         "react/jsx-sort-props": "off",
+        "react/jsx-wrap-multilines": "off",
         "react/no-array-index-key": "off",
         "react/no-multi-comp": "off",
         "react/no-set-state": "off",
