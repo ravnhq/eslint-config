@@ -32,6 +32,8 @@ module.exports = {
     // Rules that are no bueno
     "arrow-body-style": "off",
     "capitalized-comments": "off",
+    "class-methods-use-this": "off",
+    "default-param-last": "off",
     "eol-last": "off",
     "id-length": "off",
     "init-declarations": "off",
@@ -99,6 +101,8 @@ module.exports = {
     "promise/param-names": "error",
     "promise/valid-params": "error",
 
+    "sonarjs/no-duplicate-string": "off",
+
     "unicorn/no-abusive-eslint-disable": "off",
     "unicorn/no-array-for-each": "off",
     "unicorn/no-keyword-prefix": "off",
@@ -156,6 +160,7 @@ module.exports = {
         "no-dupe-args": "off", // ts(2300)
         "no-dupe-class-members": "off", // ts(2393) & ts(2300)
         "no-dupe-keys": "off", // ts(1117)
+        "no-duplicate-imports": "off",
         "no-func-assign": "off", // ts(2539)
         "no-import-assign": "off", // ts(2539) & ts(2540)
         "no-new-symbol": "off", // ts(2588)
