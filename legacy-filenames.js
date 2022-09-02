@@ -22,7 +22,7 @@ module.exports = {
     {
       files: ["**/*.tsx"],
       rules: {
-        "filenames/match-regex": ["off", /^(?:[A-Z][a-z]+)+(?:\.[\da-z]+)*$/],
+        "filenames/match-regex": ["error", /^(?:[A-Z][a-z]+)+(?:\.[\da-z]+)*$/],
         "filenames/match-exported": ["error", "pascal"],
       },
     },
