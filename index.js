@@ -46,6 +46,7 @@ module.exports = {
     "multiline-comment-style": "off",
     "no-inline-comments": "off",
     "no-magic-numbers": "off",
+    "no-param-reassign": "off",
     "no-prototype-builtins": "off",
     "no-ternary": "off",
     "no-undefined": "off",
@@ -57,7 +58,6 @@ module.exports = {
 
     // Rules that need adjusting
     "func-style": ["error", "declaration", { allowArrowFunctions: true }],
-    "no-param-reassign": ["error", { props: false }],
     "object-shorthand": ["error", "properties"],
 
     "eslint-comments/disable-enable-pair": ["error", { allowWholeFile: true }],
