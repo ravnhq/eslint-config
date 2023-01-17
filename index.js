@@ -32,6 +32,8 @@ module.exports = {
     // Rules that are no bueno
     "arrow-body-style": "off",
     "capitalized-comments": "off",
+    "class-methods-use-this": "off",
+    "default-param-last": "off",
     "eol-last": "off",
     "id-length": "off",
     "init-declarations": "off",
@@ -44,6 +46,7 @@ module.exports = {
     "multiline-comment-style": "off",
     "no-inline-comments": "off",
     "no-magic-numbers": "off",
+    "no-param-reassign": "off",
     "no-prototype-builtins": "off",
     "no-ternary": "off",
     "no-undefined": "off",
@@ -55,17 +58,22 @@ module.exports = {
 
     // Rules that need adjusting
     "func-style": ["error", "declaration", { allowArrowFunctions: true }],
-    "no-param-reassign": ["error", { props: false }],
     "object-shorthand": ["error", "properties"],
 
     "eslint-comments/disable-enable-pair": ["error", { allowWholeFile: true }],
+    "eslint-comments/no-duplicate-disable": "error",
+    "eslint-comments/no-unused-disable": "error",
 
     "unicorn/filename-case": "off",
     "filenames/match-regex": [
       "error",
       /^(?:\.?(?:[a-z][a-z0-9]*)(?:-[a-z0-9]+)*)+$/u,
     ],
-    "filenames/match-exported": ["error", "kebab"],
+    "filenames/match-exported": [
+      "error",
+      "kebab",
+      "\\.(query|service|types|styles)$",
+    ],
     "filenames/no-index": "off",
 
     "sort-imports": "off",
@@ -73,6 +81,7 @@ module.exports = {
     "import/export": "error",
     "import/named": "error",
     "import/namespace": "error",
+    "import/no-cycle": "error",
     "import/no-duplicates": "error",
     "import/no-named-as-default": "error",
     "import/no-named-as-default-member": "off",
@@ -95,6 +104,8 @@ module.exports = {
     "promise/no-return-wrap": "error",
     "promise/param-names": "error",
     "promise/valid-params": "error",
+
+    "sonarjs/no-duplicate-string": "off",
 
     "unicorn/no-abusive-eslint-disable": "off",
     "unicorn/no-array-for-each": "off",
@@ -133,7 +144,7 @@ module.exports = {
       plugins: ["@typescript-eslint"],
       extends: [
         "plugin:@typescript-eslint/recommended",
-        "plugin:@typescript-eslint/eslint-recommended",
+        "plugin:@typescript-eslint/recommended-requiring-type-checking",
         "plugin:import/typescript",
       ],
       settings: {
@@ -147,27 +158,7 @@ module.exports = {
         },
       },
       rules: {
-        "constructor-super": "off", // ts(2335) & ts(2377)
-        "getter-return": "off", // ts(2378)
-        "no-const-assign": "off", // ts(2588)
-        "no-dupe-args": "off", // ts(2300)
-        "no-dupe-class-members": "off", // ts(2393) & ts(2300)
-        "no-dupe-keys": "off", // ts(1117)
-        "no-func-assign": "off", // ts(2539)
-        "no-import-assign": "off", // ts(2539) & ts(2540)
-        "no-new-symbol": "off", // ts(2588)
-        "no-obj-calls": "off", // ts(2349)
-        "no-redeclare": "off", // ts(2451)
-        "no-setter-return": "off", // ts(2408)
-        "no-this-before-super": "off", // ts(2376)
-        "no-undef": "off", // ts(2304)
-        "no-unreachable": "off", // ts(7027)
-        "no-unsafe-negation": "off", // ts(2365) & ts(2360) & ts(2358)
-        "no-var": "error", // ts transpiles let/const to var, so no need for vars any more
-        "prefer-const": "error", // ts provides better types with const
-        "prefer-rest-params": "error", // ts provides better types with rest args over arguments
-        "prefer-spread": "error", // ts transpiles spread to apply, so no need for manual apply
-        "valid-typeof": "off", // ts(2367)
+        "no-duplicate-imports": "off",
         "consistent-return": "off", // in TS this is much less an issue
 
         "unicorn/prefer-module": "error",
