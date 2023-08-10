@@ -15,6 +15,7 @@
     "prepare": "husky install"
   },
   "devDependencies": {
+    "@commitlint/config-conventional": "^17.7.0",
     "@ravnhq/prettier-config": "^1.0.0",
     "@types/node": "^18.7.11",
     "@types/react": "^18.0.18",
