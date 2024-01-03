@@ -7,7 +7,7 @@
 **Install**:
 
 ```bash
-$ yarn add --dev eslint@"^8.0.0" @ravn/eslint-config
+$ yarn add --dev eslint@"^8.0.0" @ravnhq/eslint-config
 ```
 
 **Edit `.eslintrc.js`**:
