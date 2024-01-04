@@ -1,4 +1,9 @@
-const readPkgUp = require("read-pkg-up")
+let readPkgUp
+try {
+  readPkgUp = import("read-package-up")
+} catch (error) {
+  console.error("Error importing readPkgUp:", error)
+}
 
 /**
  * @see https://github.com/eslint/eslint/issues/3458
