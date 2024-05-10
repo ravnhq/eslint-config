@@ -1,4 +1,4 @@
-# `@ravn/eslint-config`
+# `@ravnhq/eslint-config`
 
 > Ravn [Eslint](https://eslint.org/) config.
 
