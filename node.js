@@ -5,7 +5,7 @@
 require("@rushstack/eslint-patch/modern-module-resolution")
 
 module.exports = {
-  extends: ["plugin:security/recommended"],
+  extends: ["plugin:security/recommended-legacy"],
   rules: {
     "no-console": ["error", { allow: ["info", "warn", "error"] }],
   },
